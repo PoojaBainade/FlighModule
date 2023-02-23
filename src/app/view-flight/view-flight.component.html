@@ -1,0 +1,44 @@
+<table>
+    <tr>
+        <td>
+            <h2>Flight By Carrier</h2>
+            <input type="text" #carrierName>
+             <button (click)="getFlightByCarrier(carrierName.value)">Search</button> 
+
+            <h2>Flight By Source</h2>
+            <input type="text" #sourceAirport>
+            <button (click)="getFlightBySource(sourceAirport.value)">Search</button> 
+
+            <h2>Flight By Destination</h2>
+            <input type="text" #destinationAirport>
+            <button (click)="getFlightByDestination(destinationAirport.value)">Search</button> 
+        </td>
+        <!-- <button (click)="getFlightByCarrier,getFlightBySource,getFlightByDestination (carrierName.value, sourceAirport.value, destinationAirport.value)">Search</button> -->
+    </tr>
+    <tr>
+        <td>
+            <h2>All Flight List</h2>
+            <div *ngFor="let f of allFlights">
+                <table>
+                    <tr>
+                        <div>Flight id:{{f.flightId}}</div>
+                        <div>Carrier Name: {{f.carrierName}}</div>
+                        <div>Source Airport: {{f.sourceAirport}}</div>
+                        <div>Destination Airport :{{f.destinationAirport}}</div>
+                        <div>Duration :{{f.duration}}</div>
+                        <hr/>
+                    </tr>
+                </table>
+            </div>
+        </td>
+    </tr>
+</table>
+
+
+
+
+
+
+
+
+
